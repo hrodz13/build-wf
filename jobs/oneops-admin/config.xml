@@ -60,12 +60,14 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>$GITHUB_URL/oneops-admin.git</url>
+        <!--<url>$GITHUB_URL/oneops-admin.git</url>-->
+        <url>https://github.com/Azure-Refactor/oneops-admin.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>$REF</name>
+        <!--<name>$REF</name>-->
+        <name>17.02.02-DEV</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -117,7 +119,8 @@
                 <hudson.plugins.git.GitPublisher_-TagToPush>
                   <targetRepoName>origin</targetRepoName>
                   <tagName>$PUSH_TAG</tagName>
-                  <tagMessage>Successful build $BUILD_TAG for $REF (${GIT_REVISION,length=8}</tagMessage>
+                  <!--<tagMessage>Successful build $BUILD_TAG for $REF (${GIT_REVISION,length=8}</tagMessage>-->
+                  <tagMessage>Successful build $BUILD_TAG for 17.02.02-DEV (${GIT_REVISION,length=8}</tagMessage>
                   <createTag>true</createTag>
                   <updateTag>true</updateTag>
                 </hudson.plugins.git.GitPublisher_-TagToPush>
